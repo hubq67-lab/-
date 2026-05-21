@@ -11,19 +11,57 @@
         font-family: 'Noto Sans KR', sans-serif;
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
-  }
-}
-</script>
-</head>
-  <body class="bg-gray-50">
-    <div id="root"></div>
+    <script type="importmap">
+    {
+      "imports": {
+        "react/": "https://esm.sh/react@^19.2.4/",
+        "react": "https://esm.sh/react@^19.2.4",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+        "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+      }
+    }
+    </script>
+  </head>
+  <body class="bg-gray-50 flex flex-col min-h-screen">
+    
+    <div id="root" class="flex-grow"></div>
+
+    <section class="w-full max-w-md mx-auto px-5 py-10 bg-white shadow-sm border-t border-gray-100 rounded-t-2xl md:rounded-2xl md:my-6">
+      <div class="text-center mb-6">
+        <h2 class="text-xl font-bold text-gray-900 tracking-tight">오시는 길</h2>
+        <p class="text-xs text-gray-500 mt-1">제피로스 철물점 방문 안내</p>
+      </div>
+
+      <div class="bg-gray-50 rounded-xl p-5 border border-gray-100 space-y-4 mb-5">
+        <div>
+          <span class="inline-block text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-md mb-1.5">도로명 주소</span>
+          <p class="text-sm font-medium text-gray-800 selection:bg-blue-100">경기도 안산시 상록구 이동 588-9번지 101호</p>
+        </div>
+        
+        <div class="border-t border-gray-200/60 pt-3">
+          <span class="inline-block text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md mb-1.5">교통 안내</span>
+          <p class="text-sm text-gray-600">안산시 이동 인근 / 매장 앞 주차 및 하차 가능</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3 gap-2.5">
+        <a href="https://map.naver.com/" target="_blank" rel="noopener noreferrer" 
+           class="flex flex-col items-center justify-center py-3 px-2 rounded-xl bg-[#03C75A] text-white active:scale-95 transition-transform">
+          <span class="text-xs font-bold tracking-tight">네이버 지도</span>
+        </a>
+        
+        <a href="https://map.kakao.com/" target="_blank" rel="noopener noreferrer" 
+           class="flex flex-col items-center justify-center py-3 px-2 rounded-xl bg-[#FEE500] text-[#191919] active:scale-95 transition-transform">
+          <span class="text-xs font-bold tracking-tight">카카오맵</span>
+        </a>
+
+        <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" 
+           class="flex flex-col items-center justify-center py-3 px-2 rounded-xl bg-white border border-gray-200 text-gray-700 active:scale-95 transition-transform shadow-sm">
+          <span class="text-xs font-bold tracking-tight">구글 지도</span>
+        </a>
+      </div>
+    </section>
+
     <script type="module" src="./index.tsx"></script>
   </body>
 </html>
